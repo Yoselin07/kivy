@@ -1,0 +1,81 @@
+#:kivy 2.3.0
+
+ScreenManager:
+    MenuScreen:
+    SecondScreen:
+    ThirdScreen:
+    FourdScreen:
+    FiveScreen:
+
+<MenuScreen>:
+    name: "main_menu"
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: 'horizontal'
+        Label:
+            text: "Welcome to the Main Menu!"
+            font_size: 15
+        Button:
+            text: "Go to Second Page"
+            on_press: root.manager.current = "second"
+        Button:
+            text: "Go to Third Page"
+            on_press: root.manager.current = "third"
+        Button:
+            text: "Go to Fourd Page"
+            on_press: root.manager.current = "fourd"
+        Button:
+            text: "Go to Five Page"
+            on_press: root.manager.current = "five"
+
+<SecondScreen>:
+    name: "second"
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "This is the Second Screen"
+        Button:
+            text: "Back to Main Menu"
+            on_press: root.manager.current = "main_menu"
+
+<ThirdScreen>:
+    name: "third"
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "This is the Third Screen"
+            font_size: 15
+        Button:
+            text: "Back to Main Menu"
+            on_press: root.manager.current = "main_menu"
+            
+            
+<FourdScreen>:
+    name: "fourd"
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "This is the Fourd Screen"
+            font_size: 15
+        Button:
+            text: "Back to Main Menu"
+            on_press: root.manager.current = "main_menu"
+
+<FiveScreen>:
+    name: "five"
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "This is the Five Screen"
+            font_size: 15
+        Button:
+            text: "Back to Main Menu"
+            on_press: root.manager.current = "main_menu"
+            
+
+            
