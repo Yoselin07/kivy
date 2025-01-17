@@ -1,0 +1,26 @@
+class Casa():
+    def _init_(self, ano, lugar, metros):
+         self.ano = ano
+         self.lugar = lugar
+         self.metros = metros
+
+    def _str_(self):
+      return f'Ano de construccion': {self.ano}\nUbicgacion: {self.lugar}\nMetros de construccion: {self.metros}
+
+
+## Instanciamento (clase)
+mi_casita = Casa('1980', 'Japon', '10')
+
+print(mi_casita)
+
+class Inmueble(Casa):
+    def _init_(self, ano, lugar, metros, vendido, remodelado):
+         super()._init_(ano, lugar, metros)
+         self.vendido = vendido
+         self.remodelado = remodelado
+
+    def _str_(self):
+        return f'Ano de construccion': {self.ano}\nUbicgacion: {self.lugar}\nMetros de construccion: {self.metros}
+
+casa_en_venta = Inmueble(1980, "Japon", "10", False, False)
+print(casa_en_venta)
